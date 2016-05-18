@@ -1,0 +1,30 @@
+<ion-view view-title="Login" name="login-view" class="pane-login main">
+  <ion-content class="ob-login padding">
+    <div class="ob-logo">
+    	<img src="img/ob-logo-thm.png" alt="">
+    </div>
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Username</span>
+        <input type="text" placeholder="Username" ng-model="data.email">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password" ng-model="data.password">
+      </label>
+      
+      <div class="ob-fpwd">
+       <a href="#/fpassword" class="button button-clear button-dark">Forgot Password ?</a>
+      </div>
+      
+      <a ng-click="login(data)" class="button button-block button-primary animated bounceInLeft">Sign In</a>
+      <a class="button button-block button-google animated bounceInRight">
+        <i class="fa fa-google" aria-hidden="true"></i> Sign in with Google
+      </a>
+      <a class="button button-block button-facebook animated bounceInLeft">
+        <i class="fa fa-facebook" aria-hidden="true"></i> Sign in with Facebook
+      </a>
+      <a href="#/signup" class="button button-block button-clear text-accent">Create an account</a>
+    </div>
+  </ion-content>
+</ion-view>

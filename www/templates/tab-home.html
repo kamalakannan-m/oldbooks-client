@@ -1,0 +1,63 @@
+<ion-view>
+    <ion-nav-title>
+        <img class="ob-header-logo" src="img/ob-logo.png" alt="">
+    </ion-nav-title>
+    <ion-content class="padding">
+        <div class="list list-inset ob-searchbox animated rollIn">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <form ng-submit="searchbook(searchword)">
+                    <input ng-model="searchword" type="text" placeholder="Find a book">
+                </form>
+            </label>
+        </div>
+        <div ng-if="!searched">
+            <div ng-if="relatedBooks.length>0">
+                <div class="card card-title animated slideInDown">
+                    <h4 class="ob-title">Related Search</h4>
+                </div>
+                <div class="list book-list animated bounceInLeft">
+                    <div ng-repeat="book in relatedBooks|limitTo:2">
+                        <a class="item item-thumbnail-left item-icon-right" href="#/tab/bookDetails/{{book.id}}">
+                            <img ng-src="img/{{book.imgurl}}">
+                            <h2>{{book.title}}</h2>
+                            <p>{{book.author}}</p>
+                            <p>{{ book.title}}</p>
+                            <i class="icon ion-ios-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-title animated slideInDown">
+                <h4 class="ob-title">Recently Added</h4>
+            </div>
+            <div class="list book-list animated bounceInLeft">
+                <div ng-repeat="book in recentBooks|limitTo:2">
+                    <a class="item item-thumbnail-left item-icon-right" href="#/tab/bookDetails/{{book.id}}">
+                        <img ng-src="img/{{book.imgurl}}">
+                        <h2>{{book.title}}</h2>
+                        <p>{{book.author}}</p>
+                        <p>{{ book.title}}</p>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div ng-if="searched">
+            <div class="card card-title animated slideInDown">
+                <h4 class="ob-title">Search Results</h4>
+            </div>
+            <div class="list book-list animated bounceInLeft">
+                <div ng-repeat="book in searchResult">
+                    <a class="item item-thumbnail-left item-icon-right" href="#/tab/bookDetails/{{book.id}}">
+                        <img ng-src="img/{{book.imgurl}}">
+                        <h2>{{book.title}}</h2>
+                        <p>{{book.author}}</p>
+                        <p>{{ book.title}}</p>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

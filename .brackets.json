@@ -1,0 +1,18 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/lib/ionic/js/angular-ui/angular-ui-router.min.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/lib/ionic/js/angular-ui/angular-ui-router.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/build/emulator/oldbook.app/www/plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/build/emulator/oldbook.app/www/lib/ionic/js/ionic.min.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/lib/ionic/js/ionic.bundle.min.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/lib/ionic/js/ionic.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/lib/ionic/js/ionic.min.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/plugins/cordova-plugin-console/www/console-via-logger.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/plugins/cordova-plugin-console/www/logger.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/plugins/cordova-plugin-device/www/device.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "/Users/VARUNZ/Dev/oldbook/platforms/ios/www/plugins/cordova-plugin-statusbar/www/statusbar.js",
+        "/Users/VARUNZ/Dev/oldbook/plugins/cordova-plugin-console/tests/tests.js"
+    ]
+}

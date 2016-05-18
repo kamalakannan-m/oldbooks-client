@@ -1,0 +1,47 @@
+<div class="animated fadeIn">
+    <ion-side-menus enable-menu-with-back-views="false">
+        <ion-side-menu-content>
+            <ion-nav-bar class="bar-primary">
+                <ion-nav-back-button></ion-nav-back-button>
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+            <ion-tabs class="tabs-icon-only">
+                <!-- Home Tab -->
+                <ion-tab title="Home" icon="ion-ios-home-outline" href="#/tab/home">
+                    <ion-nav-view name="tab-home" class="animated fadeIn"></ion-nav-view>
+                </ion-tab>
+                <!-- Favourite Tab -->
+                <ion-tab title="Favourites" icon="ion-ios-heart-outline" href="#/tab/fav">
+                    <ion-nav-view name="tab-fav" class="animated fadeIn"></ion-nav-view>
+                </ion-tab>
+                <!-- Search Tab -->
+                <ion-tab title="Search" icon="ion-ios-world-outline" href="#/tab/search">
+                    <ion-nav-view name="tab-search" class="animated fadeIn"></ion-nav-view>
+                </ion-tab>
+                <!-- Settings Tab -->
+                <ion-tab title="Settings" icon="ion-gear-b" href="#/tab/settings">
+                    <ion-nav-view name="tab-settings" class="animated fadeIn"></ion-nav-view>
+                </ion-tab>
+            </ion-tabs>
+            <ion-nav-view name="menuContent"></ion-nav-view>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" class="ob-sidemenu">
+            <ion-header-bar class="bar-primary">
+                <h1 class="title">LIBRARY</h1>
+            </ion-header-bar>
+            <ion-content>
+                <ion-list>
+                    <ion-item ng-repeat-start="menu in menus" class="item-divider item-icon-left item-icon-right" href="" ng-click="showSubItem()">
+                        <i class="icon ion-laptop"></i> {{menu.categoryname}}
+                        <i class="icon ion-chevron-up icon-dropdown"></i>
+                    </ion-item>
+                    <div ng-repeat-end="">
+                        <ion-item ng-repeat="sub in menu.subcategory" ng-show="subItem" menu-close href="">{{sub.subcategoryname}}</ion-item>
+                    </div>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+</div>

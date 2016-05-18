@@ -1,0 +1,37 @@
+<ion-view>
+
+	<ion-nav-title>
+		<img class="ob-header-logo" src="img/ob-logo.png" alt="">
+	</ion-nav-title>
+	
+	<ion-header-bar class="bar bar-fav bar-subheader bar-accent animated slideInDown">
+		<button class="button button-clear icon ion-ios-minus-outline" ng-click="showDelete=!showDelete; showMove=false"></button>
+		<h1 class="title">Favorites</h1>
+		<button class="button button-clear icon ion-navicon" ng-click="showMove=!showMove; showDelete=false"></button>
+ 	</ion-header-bar>
+
+	<ion-content class="padding">
+
+		<div class="list list-inset ob-searchbox animated rollIn">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input type="text" placeholder="Find a book">
+			</label>
+		</div>
+
+		<ion-list class="book-list" show-delete="showDelete" show-reorder="showMove" class="book-list animated bounceInLeft">
+
+			<ion-item class="item item-thumbnail-left item-icon-right item-remove-animate" ng-repeat="book in favBooks">
+				<img ng-src="img/{{book.imgurl}}">
+				<h2>{{book.name}}</h2>
+				<p>{{book.author}}</p>
+				<p>{{ book.description}}</p>
+				<i class="icon ion-ios-arrow-right"></i>
+				<ion-delete-button class="ion-minus-circled" ng-click="deleteBook($index)"></ion-delete-button>
+				<ion-reorder-button class="ion-navicon" on-reorder="moveBook(book, $fromIndex, $toIndex)"></ion-reorder-button>
+			</ion-item>
+	
+		</ion-list>
+
+	</ion-content>
+</ion-view>

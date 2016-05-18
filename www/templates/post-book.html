@@ -1,0 +1,52 @@
+<ion-view>
+
+	 <ion-nav-bar class="bar-primary">
+		<ion-nav-back-button class="button-clear">
+			<i class="ion-ios-arrow-back arrow-back-cust"></i>
+		</ion-nav-back-button>
+
+		<ion-nav-title>
+			<img class="ob-header-logo" src="img/ob-logo.png" alt="">
+		</ion-nav-title>
+	</ion-nav-bar>
+
+	<ion-content class="padding">
+
+		<div class="card card-title animated">
+			 <h4 class="ob-title">Post a Book</h4>
+		</div>
+
+		<div class="list list-inset animated slideInLeft">
+			<label class="item item-input">
+				<input type="text" placeholder="Title" ng-model="book.title" uib-typeahead="book for book in allbooks | filter:$viewValue | limitTo:8">
+			</label>
+		</div>
+
+		<div class="list list-inset animated slideInRight">
+			<label class="item item-input">
+				<input type="text" placeholder="Author" ng-model="book.author">
+			</label>
+		</div>
+
+		<div class="list list-inset animated slideInLeft">
+			<label class="item item-input">
+				<input type="number" placeholder="How Old" ng-model="book.howold">
+			</label>
+		</div>
+
+		<div class="list list-inset animated slideInRight">
+			<label class="item item-input">
+				<input type="tel" placeholder="Mobile" ng-model="book.mobile">
+			</label>
+		</div>
+
+		<div class="list list-inset animated slideInLeft">
+			<label class="item item-input">
+				<textarea rows="4" placeholder="Address" ng-model="book.address"></textarea>
+			</label>
+		</div>
+
+		<a href="" ng-click="postbook(book)"class="button button-block button-primary animated bounceInLeft">Post</a>
+
+	</ion-content>
+</ion-view>

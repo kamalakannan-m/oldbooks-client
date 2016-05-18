@@ -1,0 +1,32 @@
+<ion-view name="login-view" class="pane-login pane-history">
+    <ion-nav-bar class="bar-primary">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-ios-arrow-back"></i> Settings
+        </ion-nav-back-button>
+        <ion-nav-title>
+            <img class="ob-header-logo" src="img/ob-logo.png" alt="">
+        </ion-nav-title>
+    </ion-nav-bar>
+    <ion-content class="padding">
+        <div class="card card-title animated">
+            <h4 class="ob-title">My History</h4>
+        </div>
+        <div class="no-padding">
+            <div class="button-bar">
+                <a href="" ng-click="setActive('post')" class="button button-block button-primary animated bounceInLeft">Posted</a>
+                <a href="" ng-click="setActive('request')" class="button button-block button-primary animated bounceInRight">Requested</a>
+            </div>
+        </div>
+        <div class="list book-list animated bounceInLeft">
+            <div ng-repeat="book in booklist">
+                <a class="item item-thumbnail-left item-icon-right" href="#/tab/bookDetails/{{book.id}}">
+                    <img ng-src="img/b1.jpg">
+                    <h2>{{book.title}}</h2>
+                    <p>{{book.author}}</p>
+                    <p>{{ book.title}}</p>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

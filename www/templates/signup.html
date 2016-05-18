@@ -1,0 +1,49 @@
+<ion-view class="pane-signup">
+  
+  <ion-nav-bar class="bar-primary">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-ios-arrow-back"></i> Sign In
+    </ion-nav-back-button>
+    <ion-nav-title>
+      <img class="ob-header-logo" src="img/ob-logo.png" alt="">
+    </ion-nav-title>
+  </ion-nav-bar>
+  
+ 
+  <ion-content class="padding">
+    <div class="card card-title">
+      <h4 class="ob-title">Sign Up</h4>
+    </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" placeholder="FirstName" ng-model="data.firstname">
+      </label>
+      <label class="item item-input">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" placeholder="LastName" ng-model="data.lastname">
+      </label>
+      <label class="item item-input">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <input type="text" placeholder="Email" ng-model="data.email">
+      </label>
+      <label class="item item-input">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <input type="text" placeholder="Mobile Number" ng-model="data.mobilenumber">
+      </label>
+      <label class="item item-input">
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="text" placeholder="Password" ng-model="data.password">
+      </label>
+       <label class="item item-input">
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="text" placeholder="Confirm Password" ng-model="data.confirmpassword">
+      </label>
+      
+      <button ng-click="signup(data)"class="button button-block button-primary animated bounceInLeft">Join Now</button>
+      
+      <a href="#/login" class="button button-block button-clear text-accent">Already have an account ?</a>
+    </div>
+  </ion-content>
+  
+</ion-view>
